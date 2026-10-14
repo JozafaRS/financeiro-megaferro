@@ -43,6 +43,7 @@ def processar_arquivo(arquivo):
     "Prazo",
     "Descrição (Banco)",
     "Descrição (Conta Bancária)",
+    "Tipo de Título"
 ]
     nome_tabela = "contas_a_receber_megaferro"
 
@@ -75,7 +76,7 @@ def processar_arquivo(arquivo):
     
     progresso.progress(3/4, 'Enviando Dados...')
     try:
-        #up.adicionar_registros(data_frame, nome_tabela)
+        up.adicionar_registros(data_frame, nome_tabela)
         progresso.progress(4/4, 'Finalizado!')
         progresso.empty()
         st.success(f'Base de dados atualizada com sucesso! {len(data_frame)} registros adicionados')    
